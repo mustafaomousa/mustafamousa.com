@@ -1,8 +1,10 @@
 const About = () => {
   return (
-    <div className="section">
-      <h1>About</h1>
-    </div>
+    <section id="about">
+      <div className="section">
+        <h1>About</h1>
+      </div>
+    </section>
   );
 };
 

@@ -1,8 +1,10 @@
 const Projects = () => {
   return (
-    <div className="section">
-      <h1>Projects</h1>
-    </div>
+    <section id="projects">
+      <div className="section">
+        <h1>Projects</h1>
+      </div>
+    </section>
   );
 };
 

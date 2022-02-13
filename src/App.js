@@ -7,11 +7,14 @@ import Navigation from "./components/Navigation";
 import "./App.css";
 
 const sections = [
-  { name: "Home" },
-  { name: "About" },
-  { name: "Skills" },
-  { name: "Projects" },
-  { name: "Contact" },
+  { name: "Home", href: "#home" },
+  {
+    name: "About",
+    href: "#about",
+  },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
 ];
 
 function App() {

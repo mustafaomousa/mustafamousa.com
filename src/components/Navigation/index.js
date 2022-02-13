@@ -6,7 +6,7 @@ const Navigation = ({ sections }) => {
       <Container maxWidth="xl">
         <Toolbar>
           {sections.map((section) => (
-            <Button color="secondary" key={section.name}>
+            <Button color="secondary" key={section.name} href={section.href}>
               {section.name}
             </Button>
           ))}

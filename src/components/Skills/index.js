@@ -1,8 +1,10 @@
 const Skills = () => {
   return (
-    <div className="section">
-      <h1>Skills</h1>
-    </div>
+    <section id="skills">
+      <div className="section">
+        <h1>Skills</h1>
+      </div>
+    </section>
   );
 };
 
