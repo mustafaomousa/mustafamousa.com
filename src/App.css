@@ -1,4 +1,24 @@
 .section {
   min-height: 100vh;
-  padding: 65px 0px;
+}
+
+/* IMAGES */
+.home-me {
+  height: 350px;
+}
+
+/* HELPERS */
+
+.flex-row-center-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row-center-end {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
 }

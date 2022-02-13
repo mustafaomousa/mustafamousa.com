@@ -2,7 +2,7 @@ import { AppBar, Button, Container, CssBaseline, Toolbar } from "@mui/material";
 
 const Navigation = ({ sections }) => {
   return (
-    <AppBar fixed="true">
+    <AppBar fixed="true" color="transparent" elevation={false}>
       <Container maxWidth="xl">
         <Toolbar>
           {sections.map((section) => (
