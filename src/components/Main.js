@@ -8,11 +8,11 @@ const Main = () => {
   return (
     <div>
       <Home />
-      <Divider />
+      {/* <Divider /> */}
       <About />
-      <Divider />
+      {/* <Divider /> */}
       <Skills />
-      <Divider />
+      {/* <Divider /> */}
       <Projects />
     </div>
   );
