@@ -1,13 +1,14 @@
-import { Grid, Typography } from "@mui/material";
+import { Divider, Grid, Typography } from "@mui/material";
 
 const Skills = () => {
   return (
     <section id="skills">
       <div className="section">
+        <Typography variant="h3">My skillset</Typography>
+        <Divider />
         <Grid container>
           <Grid item xs={6}></Grid>
           <Grid item xs={6}>
-            <Typography variant="h3">My skillset</Typography>
             <Typography variant="body1">
               I'm currently a Full-Stack Developer and a prior Audi Brand
               Specialist with over 4 years of experience in technology
