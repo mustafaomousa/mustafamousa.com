@@ -1,19 +1,17 @@
-import { Divider } from "@mui/material";
 import About from "./About";
 import Home from "./Home";
 import Projects from "./Projects";
 import Skills from "./Skills";
+import Contact from "./Contact";
 
 const Main = () => {
   return (
     <div>
       <Home />
-      {/* <Divider /> */}
       <About />
-      {/* <Divider /> */}
       <Skills />
-      {/* <Divider /> */}
       <Projects />
+      <Contact />
     </div>
   );
 };

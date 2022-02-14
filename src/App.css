@@ -1,25 +1,25 @@
 .section {
-  /* min-height: 100vh; */
-  padding: 64px 0px;
+  min-height: 100vh;
+  padding: 75px 0;
 }
 
 /* IMAGES */
 .home-me {
-  height: 350px;
+  height: 650px;
 }
 
 /* HELPERS */
 
-.flex-row-center-center {
+.flex-row-start-center {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .flex-row-center-end {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: flex-end;
+  align-items: center;
 }
