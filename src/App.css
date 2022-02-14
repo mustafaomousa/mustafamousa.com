@@ -14,6 +14,20 @@
 
 /* HELPERS */
 
+.flex-column-center-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row-start-start {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 .flex-row-start-center {
   display: flex;
   flex-direction: row;
@@ -52,7 +66,7 @@
   width: 120px;
   height: auto;
   border-radius: 50%;
-  border: 5px solid rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(0, 0, 0, 0.5);
 }
 
 .experience-bubble-container {
@@ -62,15 +76,24 @@
 }
 
 .bubble-container-2 {
-  background-color: rgba(4, 0, 255, 0.1);
+  border: 2px solid rgba(4, 0, 255, 0.1);
   padding: 20px;
   border-radius: 15px;
 }
 
 .education-bubble-container {
-  background-color: rgba(4, 0, 255, 0.1);
+  border: 2px solid rgba(4, 0, 255, 0.1);
   padding: 20px;
   border-radius: 15px;
-  width: 350px;
-  min-height: 350px;
+  /* width: 350px; */
+  /* min-height: 350px; */
+}
+
+/* SKILLS */
+
+.skill-bubble-container {
+  background-color: rgba(4, 0, 255, 0.1);
+  height: 170px;
+  width: 170px;
+  border-radius: 15px;
 }

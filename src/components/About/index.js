@@ -1,4 +1,5 @@
 import { Grid, List, ListItem, ListItemText, Typography } from "@mui/material";
+import SchoolIcon from "@mui/icons-material/School";
 import aboutme from "./about-me.jpeg";
 
 const experience = [
@@ -59,6 +60,9 @@ const About = () => {
   return (
     <section id="about">
       <div className="section">
+        <Typography variant="h2" className="section-header">
+          About
+        </Typography>
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
             <div className="bubble-container-2">
@@ -106,7 +110,7 @@ const About = () => {
             </div>
           </Grid>
         </Grid>
-        <Typography className="section-header" variant="h4">
+        <Typography className="section-header" variant="h2">
           Experience
         </Typography>
         <Grid container spacing={2}>
@@ -137,15 +141,16 @@ const About = () => {
             </Grid>
           ))}
         </Grid>
-        <Typography variant="h4" className="section-header">
+        <Typography variant="h2" className="section-header">
           Education
         </Typography>
         <Grid container spacing={2}>
           {education.map((edu, i) => (
-            <Grid item key={i}>
+            <Grid item key={i} width="100%">
               <div className="education-bubble-container">
                 <Grid container direction="column" spacing={2}>
                   <Grid item xs={12} lg={3}>
+                    <SchoolIcon />
                     <Typography variant="h6">{edu.type}</Typography>
                     <Typography variant="caption">{edu.location}</Typography>
                   </Grid>
