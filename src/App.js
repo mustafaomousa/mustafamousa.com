@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Container } from "@mui/material";
 
 import Main from "./components/Main";
 import Navigation from "./components/Navigation";
@@ -21,11 +20,11 @@ function App() {
   return (
     <BrowserRouter>
       <Navigation sections={sections} />
-      <Container maxWidth="xl">
+      <div>
         <Routes>
           <Route path="/" element={<Main />} />
         </Routes>
-      </Container>
+      </div>
     </BrowserRouter>
   );
 }

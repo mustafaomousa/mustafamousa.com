@@ -1,22 +1,14 @@
-import { Grid, Typography } from "@mui/material";
-
 const Projects = () => {
   return (
     <section id="projects">
       <div className="section">
-        <Grid container>
-          <Grid item xs={6}>
-            <Typography variant="h3">Some of my work</Typography>
-            <Typography variant="body1">
-              I'm currently a Full-Stack Developer and a prior Audi Brand
-              Specialist with over 4 years of experience in technology
-              implementations and training. I'm from Fort Worth, Texas. I
-              engineer and develop full stack applications. I like to work with
-              a collaborative team and amazing companies that provide growth.
-            </Typography>
-          </Grid>
-          <Grid item xs={6}></Grid>
-        </Grid>
+        <h2 className="section-header">Some of my work</h2>
+        {/* <Tabs>
+          <Tab label="Rumblr" />
+          <Tab label="audifamily" />
+          <Tab label="EncephaScape" />
+          <Tab label="CareBnb" />
+        </Tabs> */}
       </div>
     </section>
   );

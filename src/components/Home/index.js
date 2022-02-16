@@ -1,4 +1,3 @@
-import { Typography } from "@mui/material";
 import me from "./home-banner.png";
 
 const Home = () => {
@@ -10,8 +9,8 @@ const Home = () => {
             <img className="home-me" src={me} style={{ height: "500px" }} />
           </div>
           <div>
-            <Typography variant="h2">Hey there,</Typography>
-            <Typography variant="h1">I'm Mustafa.</Typography>
+            <h2>Hey there,</h2>
+            <h1>I'm Mustafa.</h1>
           </div>
         </div>
       </div>

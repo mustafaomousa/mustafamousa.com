@@ -1,11 +1,9 @@
-import { Box, Button, Grid, TextField, Typography } from "@mui/material";
-
 const Contact = () => {
   return (
     <section id="contact">
       <div className="section">
-        <Typography variant="h3">Let's connect!</Typography>
-        <Grid container>
+        <h3>Let's connect!</h3>
+        {/* <Grid container>
           <Grid item xs={5}>
             <Box
               component="form"
@@ -29,7 +27,7 @@ const Contact = () => {
             </Box>
           </Grid>
           <Grid item xs={6}></Grid>
-        </Grid>
+        </Grid> */}
       </div>
     </section>
   );

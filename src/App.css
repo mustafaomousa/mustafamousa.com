@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .section-header {
   padding: 40px 0 20px 0;
 }
@@ -63,36 +67,30 @@
 /* ABOUT */
 
 .aboutme-avatar {
-  width: 120px;
+  width: 100px;
   height: auto;
   border-radius: 50%;
   border: 2px solid rgba(0, 0, 0, 0.5);
 }
 
 .experience-bubble-container {
-  background-color: rgba(4, 0, 255, 0.1);
   padding: 20px;
   border-radius: 15px;
 }
 
 .bubble-container-2 {
-  border: 2px solid rgba(4, 0, 255, 0.1);
   padding: 20px;
   border-radius: 15px;
 }
 
 .education-bubble-container {
-  border: 2px solid rgba(4, 0, 255, 0.1);
   padding: 20px;
   border-radius: 15px;
-  /* width: 350px; */
-  /* min-height: 350px; */
 }
 
 /* SKILLS */
 
 .skill-bubble-container {
-  background-color: rgba(4, 0, 255, 0.1);
   height: 170px;
   width: 170px;
   border-radius: 15px;

@@ -1,5 +1,3 @@
-import { Grid, List, ListItem, ListItemText, Typography } from "@mui/material";
-import SchoolIcon from "@mui/icons-material/School";
 import aboutme from "./about-me.jpeg";
 
 const experience = [
@@ -60,10 +58,8 @@ const About = () => {
   return (
     <section id="about">
       <div className="section">
-        <Typography variant="h2" className="section-header">
-          About
-        </Typography>
-        <Grid container spacing={2}>
+        <h2 className="section-header">About</h2>
+        {/* <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
             <div className="bubble-container-2">
               <Grid className="padding-medium-top-bottom" container>
@@ -84,8 +80,8 @@ const About = () => {
                 </Grid>
               </Grid>
             </div>
-          </Grid>
-          <Grid item xs={12} md={6}>
+          </Grid> */}
+        {/* <Grid item xs={12} md={6}>
             <div className="bubble-container-2">
               <List disablePadding>
                 <ListItem>
@@ -109,59 +105,59 @@ const About = () => {
               </List>
             </div>
           </Grid>
-        </Grid>
-        <Typography className="section-header" variant="h2">
-          Experience
-        </Typography>
-        <Grid container spacing={2}>
+        </Grid> */}
+        <h2 className="section-header">Experience</h2>
+        {/* <Grid container spacing={2}>
           {experience.map((job, i) => (
-            <Grid item width="100%">
-              <div className="experience-bubble-container" key={i}>
-                <Grid container spacing={2} direction={"row"}>
-                  <Grid item xs={12} lg={3}>
-                    <Typography variant="h6">{job.company}</Typography>
-                    <Typography variant="caption">
-                      {job.period} - {job.type}
-                    </Typography>
+            <Grow in={true} timeout={i * 500 + 1000}>
+              <Grid item width="100%">
+                <div className="experience-bubble-container" key={i}>
+                  <Grid container spacing={2} direction={"row"}>
+                    <Grid item xs={12} lg={3}>
+                      <Typography variant="h6">{job.company}</Typography>
+                      <Typography variant="caption">
+                        {job.period} - {job.type}
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={12} lg={9}>
+                      <Typography variant="h6">{job.title}</Typography>
+                      {job.bullets.map((bullet, idx) => (
+                        <ListItem key={idx}>
+                          <ListItemText
+                            primary={
+                              <Typography variant="body2">{bullet}</Typography>
+                            }
+                          />
+                        </ListItem>
+                      ))}
+                    </Grid>
                   </Grid>
-                  <Grid item xs={12} lg={9}>
-                    <Typography variant="h6">{job.title}</Typography>
-                    {job.bullets.map((bullet, idx) => (
-                      <ListItem key={idx}>
-                        <ListItemText
-                          primary={
-                            <Typography variant="body2">{bullet}</Typography>
-                          }
-                        />
-                      </ListItem>
-                    ))}
-                  </Grid>
-                </Grid>
-              </div>
-            </Grid>
+                </div>
+              </Grid>
+            </Grow>
           ))}
-        </Grid>
-        <Typography variant="h2" className="section-header">
-          Education
-        </Typography>
-        <Grid container spacing={2}>
+        </Grid> */}
+        <h2 className="section-header">Education</h2>
+        {/* <Grid container spacing={2}>
           {education.map((edu, i) => (
-            <Grid item key={i} width="100%">
-              <div className="education-bubble-container">
-                <Grid container direction="column" spacing={2}>
-                  <Grid item xs={12} lg={3}>
-                    <SchoolIcon />
-                    <Typography variant="h6">{edu.type}</Typography>
-                    <Typography variant="caption">{edu.location}</Typography>
+            <Grow in={true} timeout={i * 500 + 1000}>
+              <Grid item key={i} width="100%">
+                <div className="education-bubble-container">
+                  <Grid container direction="column" spacing={2}>
+                    <Grid item xs={12} lg={3}>
+                      <SchoolIcon />
+                      <Typography variant="h6">{edu.type}</Typography>
+                      <Typography variant="caption">{edu.location}</Typography>
+                    </Grid>
+                    <Grid item xs={12} lg={9}>
+                      <Typography variant="body2">{edu.description}</Typography>
+                    </Grid>
                   </Grid>
-                  <Grid item xs={12} lg={9}>
-                    <Typography variant="body2">{edu.description}</Typography>
-                  </Grid>
-                </Grid>
-              </div>
-            </Grid>
+                </div>
+              </Grid>
+            </Grow>
           ))}
-        </Grid>
+        </Grid> */}
       </div>
     </section>
   );

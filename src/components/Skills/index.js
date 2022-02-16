@@ -1,4 +1,3 @@
-import { Divider, Grid, Typography } from "@mui/material";
 import icons from "../../icons";
 
 const myskills = [
@@ -21,25 +20,21 @@ const Skills = () => {
   return (
     <section id="skills">
       <div className="section">
-        <Typography variant="h2" className="section-header">
-          Technical skills
-        </Typography>
-        <Grid container direction="row" spacing={2}>
-          {myskills.map((skill) => (
-            <Grid item>
-              <div className="skill-bubble-container flex-column-center-center">
-                {skill.name !== "SQLAlchemy" && (
-                  <img
-                    src={skill.icon}
-                    alt="skill"
-                    style={{ width: 50, height: 50 }}
-                  />
-                )}
-                <Typography variant="button">{skill.name}</Typography>
-              </div>
-            </Grid>
+        <h2 className="section-header">Technical skills</h2>
+        <div>
+          {myskills.map((skill, i) => (
+            <div className="skill-bubble-container flex-column-center-center">
+              {skill.name !== "SQLAlchemy" && (
+                <img
+                  src={skill.icon}
+                  alt="skill"
+                  style={{ width: 50, height: 50 }}
+                />
+              )}
+              <p>{skill.name}</p>
+            </div>
           ))}
-        </Grid>
+        </div>
       </div>
     </section>
   );
