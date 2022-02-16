@@ -63,99 +63,79 @@ const About = () => {
   return (
     <section id="about">
       <div className="container mx-auto pt-20 pb-20 pl-5 pr-5 space-y-10">
-        <div>
-          <div className="text-4xl font-extrabold flex pb-5">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-purple-500">
-              a little about me.
-            </span>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <div>
-              <img src={aboutme} className="float-left w-[80px] mr-2" />
-              <p className="antialiased text-md md:text-lg text-slate-100">
-                I'm currently a software engineer with over four years of
-                experience in technology implementations and training. I'm from
-                Texas. I engineer and develop full stack applications. I like to
-                work with a collaborative team and amazing companies that
-                provide growth.
-              </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div>
+            <div className="text-4xl font-extrabold flex pb-5">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-purple-500">
+                a little about me.
+              </span>
             </div>
-            <div className="space-y-2">
-              <div>
-                <p className="text-sm font-bold text-slate-500">Name</p>
-                <p className="antialiased text-md md:text-lg text-slate-100">
-                  Mustafa Mousa
-                </p>
-              </div>
-              <div>
-                <p className="text-sm font-bold text-slate-500">Location</p>
-                <p className="antialiased text-md md:text-lg text-slate-100">
-                  Dallas, Texas
-                </p>
-              </div>
-              <div>
-                <p className="text-sm font-bold text-slate-500">Phone</p>
-                <p className="antialiased text-md md:text-lg text-slate-100">
-                  +1 817 239 3031
-                </p>
-              </div>
-              <div>
-                <p className="text-sm font-bold text-slate-500">Email</p>
-                <p className="antialiased text-md md:text-lg text-slate-100">
-                  contact@mustafamousa.com
-                </p>
-              </div>
+            <img
+              src={aboutme}
+              className="float-left max-w-[125px] mr-4 rounded-lg grayscale shadow-lg mx-auto "
+            />
+            <p className="pixel-antialiased text-lg md:text-xl lg:text-3xl font-bold text-slate-400">
+              I'm currently a software engineer with over four years of
+              experience in technology implementations and training. I'm from
+              Texas. I engineer and develop full stack applications. I like to
+              work with a collaborative team and amazing companies that provide
+              growth.
+            </p>
+          </div>
+          <div>
+            <div className="text-4xl font-extrabold flex pb-5">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-purple-500">
+                my experience.
+              </span>
+            </div>
+            <div className="space-y-5">
+              {experience.map((job) => (
+                <div className="rounded-lg shadow-lg hover:scale-105 px-10 py-5 bg-slate-800 transition ease-in-out ">
+                  <div className="mb-5">
+                    <p className="pixel-antialiased text-lg md:text-lg font-extrabold text-white">
+                      {job.company}
+                    </p>
+                    <p className="antialiased text-lg md:text-md font-bold text-sky-500">
+                      {job.title}
+                    </p>
+                  </div>
+                  <div>
+                    <ul className="list-disc">
+                      {job.bullets.map((point) => (
+                        <li className="antialiased leading-relaxed text-md text-slate-400 ">
+                          <p>{point}</p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-        <div>
-          <div className="text-4xl font-extrabold flex pb-5">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-purple-500">
-              my experience.
-            </span>
-          </div>
-          <div className="space-y-5">
-            {experience.map((job) => (
-              <div>
-                <div></div>
+          <div>
+            <div className="text-4xl font-extrabold flex pb-5">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-purple-500">
+                my education.
+              </span>
+            </div>
+            <div className="space-y-5">
+              {education.map((edu) => (
                 <div>
-                  <p className="text-xl font-bold text-slate-100">
-                    {job.company}
-                  </p>
-                  <p className="text-md pb-2 text-slate-100">{job.title}</p>
-                  <ul className="">
-                    {job.bullets.map((point) => (
-                      <li className="text-sm text-slate-400">
-                        <p>- {point}</p>
-                      </li>
-                    ))}
-                  </ul>
+                  <div></div>
+                  <div>
+                    <p className="text-xl font-bold text-slate-100">
+                      {edu.location}
+                    </p>
+                    <p className="text-md pb-2 text-slate-100">
+                      {edu.type} - {edu.period}
+                    </p>
+                    <p className="text-sm text-slate-400">
+                      - {edu.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div>
-          <div className="text-4xl font-extrabold flex pb-5">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-purple-500">
-              my education.
-            </span>
-          </div>
-          <div className="space-y-5">
-            {education.map((edu) => (
-              <div>
-                <div></div>
-                <div>
-                  <p className="text-xl font-bold text-slate-100">
-                    {edu.location}
-                  </p>
-                  <p className="text-md pb-2 text-slate-100">
-                    {edu.type} - {edu.period}
-                  </p>
-                  <p className="text-sm text-slate-400">- {edu.description}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -19,7 +19,7 @@ const myskills = [
 const Skills = () => {
   return (
     <section id="skills">
-      <div className="container mx-auto pt-20 pb-20 pl-5 pr-5 space-y-10">
+      <div className="container mx-auto py-20 px-5 space-y-10">
         <div className="text-4xl font-extrabold flex">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-purple-500">
             my technical skills
