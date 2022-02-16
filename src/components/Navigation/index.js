@@ -1,6 +1,6 @@
 const Navigation = ({ sections }) => {
   return (
-    <nav className="fixed w-full shadow-lg bg-gray-900">
+    <nav className="pl-10 pr-10 fixed w-full shadow-lg bg-gray-900">
       <div className="flex justify-between items-center max-w-7xl h-14 mx-auto">
         <div className="space-x-4">
           {sections.map((section) => (
