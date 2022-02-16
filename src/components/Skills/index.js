@@ -25,17 +25,15 @@ const Skills = () => {
             my technical skills
           </span>
         </div>
-        <div className="flex flex-wrap gap-5">
+        <div className="flex flex-wrap justify-center sm:justify-start">
           {myskills.map((skill) => (
             <div className="flex flex-col items-center justify-center w-[120px] h-[120px] space-y-1  transition ease-in-out hover:scale-110 rounded-xl">
-              {skill.name !== "SQLAlchemy" && (
-                <img
-                  className="select-none bg-sky-500 p-5 rounded-full"
-                  src={skill.icon}
-                  alt="skill"
-                  style={{ width: 80, height: 80 }}
-                />
-              )}
+              <img
+                className="select-none bg-sky-500 p-5 rounded-full"
+                src={skill.name !== "SQLAlchemy" && skill.icon}
+                alt="SQLAlchemy"
+                style={{ width: 80, height: 80 }}
+              />
               <p className="text-md select-none text-white font-bold">
                 {skill.name}
               </p>

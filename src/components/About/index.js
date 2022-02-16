@@ -92,7 +92,7 @@ const About = () => {
               </div>
               <div className="space-y-10">
                 {education.map((edu) => (
-                  <div className="rounded-lg shadow-lg hover:scale-105 px-10 py-5 bg-slate-900 transition ease-in-out ">
+                  <div className="rounded-lg shadow-lg hover:scale-105 px-4 py-3 bg-slate-900 transition ease-in-out ">
                     <div className="mb-5">
                       <p className="pixel-antialiased text-lg md:text-lg font-extrabold text-white">
                         {edu.location}
@@ -122,7 +122,7 @@ const About = () => {
             </div>
             <div className="space-y-10">
               {experience.map((job) => (
-                <div className="rounded-lg shadow-lg hover:scale-105 px-10 py-5 bg-slate-800 transition ease-in-out ">
+                <div className="rounded-lg shadow-lg hover:scale-105 px-4 py-3 bg-slate-800 transition ease-in-out ">
                   <div className="mb-5">
                     <p className="pixel-antialiased text-lg md:text-lg font-extrabold text-white">
                       {job.company}
@@ -135,7 +135,7 @@ const About = () => {
                     </p>
                   </div>
                   <div>
-                    <ul className="list-disc">
+                    <ul className="list-none space-y-3">
                       {job.bullets.map((point) => (
                         <li className="antialiased leading-relaxed text-md text-slate-400 ">
                           <p>{point}</p>

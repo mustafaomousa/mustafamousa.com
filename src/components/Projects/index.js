@@ -79,19 +79,19 @@ const Projects = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10">
           {projects.map((project) => (
-            <div className="flex flex-col justify-between min-w-[300px] max-w-[430px] bg-slate-900 shadow-lg rounded-xl">
-              <div>
+            <div className="mx-auto select-none flex flex-col justify-between min-w-[300px] max-w-[430px] bg-slate-900 shadow-lg rounded-xl transition ease-in-out hover:scale-110 ">
+              {/* <div>
                 <img
                   className="aspect-[3/2] w-full rounded-t-xl"
                   src={project.screenshot}
                 />
-              </div>
-              <div className="flex flex-col items-between px-6 py-3">
+              </div> */}
+              <div className="flex flex-col items-between px-4 py-3">
                 <div className="">
                   <p className="text-lg font-bold mb-1 text-white">
                     {project.name}
                   </p>
-                  <p className="text-md mb-5 text-sky-500">
+                  <p className="text-md mb-5 text-slate-400">
                     {project.description}
                   </p>
                 </div>

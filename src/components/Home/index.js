@@ -10,11 +10,8 @@ const Home = () => {
         />
 
         <div className="space-y-2 flex flex-col ml-10">
-          <p className="antialiased font-bold text-white text-lg md:text-xl lg:text-2xl">
-            Hey there
-          </p>
           <p className="antialiased font-bold text-white text-2xl md:text-3xl lg:text-4xl">
-            I'm Mustafa
+            I'm Mustafa,
           </p>
           <div className="text-2xl md:text-3xl lg:text-4xl font-extrabold flex">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-purple-500">
