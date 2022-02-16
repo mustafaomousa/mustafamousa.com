@@ -1,6 +1,6 @@
 const Navigation = ({ sections }) => {
   return (
-    <nav className="pl-10 pr-10 fixed w-full shadow-lg bg-gray-900">
+    <nav className="pl-10 pr-10 fixed w-full bg-[#2E3544]">
       <div className="flex justify-between items-center max-w-7xl h-14 mx-auto">
         <div className="space-x-4">
           {sections.map((section) => (
@@ -14,8 +14,8 @@ const Navigation = ({ sections }) => {
           ))}
         </div>
         <div className="space-x-4">
-          <div className="hover:animate-pulse rounded-full bg-gradient-to-r from-sky-500 to-purple-500">
-            <button className="rounded-full bg-gray-900 m-0.5 pl-2.5 pr-2.5 pt-0.2 pb-0.2 text-white">
+          <div className="hover:from-purple-500 hover:to-sky-500 rounded-full bg-gradient-to-r from-sky-500 to-purple-500">
+            <button className="rounded-full bg-[#2E3544] m-0.5 pl-2.5 pr-2.5 pt-0.2 pb-0.2 text-white">
               Connect
             </button>
           </div>
