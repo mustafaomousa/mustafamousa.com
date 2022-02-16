@@ -56,7 +56,7 @@ const education = [
 
 const About = () => {
   return (
-    <section className="bg-slate-200" id="about">
+    <section className="bg-sky-100" id="about">
       <div className="container mx-auto min-h-[50vh] p-20 space-y-20">
         <div className="space-y-10">
           <div className="text-4xl font-extrabold flex">

@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
     <section id="contact">
-      <div className="container mx-auto min-h-[50vh] p-20 space-y-10">
+      <div className="container mx-auto min-h-[50vh] p-20 space-y-10 flex items-start flex-col">
         <div className="text-4xl font-extrabold flex">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-purple-500">
             lets connect!

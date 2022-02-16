@@ -77,8 +77,8 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="bg-slate-200" id="projects">
-      <div className="container mx-auto min-h-[50vh] p-20 space-y-20">
+    <section className="bg-sky-100" id="projects">
+      <div className="container mx-auto min-h-[50vh] p-20 space-y-10">
         <div className="text-4xl font-extrabold flex">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-purple-500">
             some of my work.
@@ -99,7 +99,7 @@ const Projects = () => {
                   </button>
                 </div>
               </div>
-              <div className="flex  justify-between bg-white shadow-lg rounded-sm">
+              <div className="flex  justify-between bg-white shadow-lg">
                 <div className="flex flex-col justify-between p-10">
                   <div className="">
                     <p className="text-2xl font-bold mb-2">{project.name}</p>

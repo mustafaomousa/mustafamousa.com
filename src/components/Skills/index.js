@@ -18,7 +18,7 @@ const myskills = [
 
 const Skills = () => {
   return (
-    <section id="skills">
+    <section className="bg-sky-100" id="skills">
       <div className="container mx-auto min-h-[50vh] p-20 space-y-20">
         <div className="space-y-10">
           <div className="text-4xl font-extrabold flex">
@@ -28,7 +28,7 @@ const Skills = () => {
           </div>
           <div className="flex flex-wrap">
             {myskills.map((skill) => (
-              <div className="flex flex-col items-center justify-center bg-slate-50 rounded-sm w-[150px] h-[150px] m-5 space-y-2 shadow-md transition ease-in-out hover:scale-110">
+              <div className="flex flex-col items-center justify-center bg-slate-50 w-[150px] h-[150px] m-5 space-y-2 shadow-md transition ease-in-out hover:scale-110">
                 {skill.name !== "SQLAlchemy" && (
                   <img
                     src={skill.icon}
