@@ -56,108 +56,91 @@ const education = [
 
 const About = () => {
   return (
-    <section id="about">
-      <div className="section">
-        <h2 className="section-header">About</h2>
-        {/* <Grid container spacing={2}>
-          <Grid item xs={12} md={6}>
-            <div className="bubble-container-2">
-              <Grid className="padding-medium-top-bottom" container>
-                <Grid item md={12} lg={3}>
-                  <div className="flex-row-center-center">
-                    <img className="aboutme-avatar" src={aboutme} />
-                  </div>
-                </Grid>
-                <Grid item md={12} lg={9}>
-                  <Typography variant="body1" lineHeight={2}>
-                    I'm currently a Full-Stack Developer and a prior Audi Brand
-                    Specialist with over 4 years of experience in technology
-                    implementations and training. I'm from Fort Worth, Texas. I
-                    engineer and develop full stack applications. I like to work
-                    with a collaborative team and amazing companies that provide
-                    growth.
-                  </Typography>
-                </Grid>
-              </Grid>
+    <section className="bg-slate-300" id="about">
+      <div className="container mx-auto min-h-screen p-20 space-y-20">
+        <div className="space-y-10">
+          <div className="flex">
+            <p className="bg-gradient-to-r from-sky-500 to-purple-500 w-auto text-2xl p-2 text-white">
+              a little about me.
+            </p>
+          </div>
+          <div>
+            <p className="mb-1 text-sm font-bold">Name</p>
+            <p className="antialiased text-md md:text-lg lg:text-xl">
+              Mustafa Mousa
+            </p>
+          </div>
+          <div>
+            <p className="mb-1 text-sm font-bold">Location</p>
+            <p className="antialiased text-md md:text-lg lg:text-xl">
+              Dallas, Texas
+            </p>
+          </div>
+          <div>
+            <p className="mb-1 text-sm font-bold">Phone</p>
+            <p className="antialiased text-md md:text-lg lg:text-xl">
+              +1 817 239 3031
+            </p>
+          </div>
+          <div>
+            <p className="mb-1 text-sm font-bold">Email</p>
+            <p className="antialiased text-md md:text-lg lg:text-xl">
+              contact@mustafamousa.com
+            </p>
+          </div>
+          <div>
+            <p className="mb-1 text-sm font-bold">Summary</p>
+            <p className="antialiased text-md md:text-lg lg:text-xl">
+              I'm currently a software engineer with over four years of
+              experience in technology implementations and training. I'm from
+              Fort Worth, Texas. I engineer and develop full stack applications.
+              I like to work with a collaborative team and amazing companies
+              that provide growth.
+            </p>
+          </div>
+        </div>
+        <div className="space-y-10">
+          <div className="flex">
+            <p className="bg-gradient-to-r from-sky-500 to-purple-500 w-auto text-2xl p-2 text-white">
+              my experience.
+            </p>
+          </div>
+          {experience.map((job) => (
+            <div>
+              <div></div>
+              <div>
+                <p className="text-xl font-bold">{job.company}</p>
+                <p className="text-lg mb-2">{job.title}</p>
+                <ul className="list-disc pl-10">
+                  {job.bullets.map((point) => (
+                    <li>
+                      <p className="text-sm">{point}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </Grid> */}
-        {/* <Grid item xs={12} md={6}>
-            <div className="bubble-container-2">
-              <List disablePadding>
-                <ListItem>
-                  <ListItemText primary="Name" secondary="Mustafa Mousa" />
-                </ListItem>
-                <ListItem>
-                  <ListItemText primary="Birthday" secondary="July 25th" />
-                </ListItem>
-                <ListItem>
-                  <ListItemText primary="Location" secondary="Dallas, Texas" />
-                </ListItem>
-                <ListItem>
-                  <ListItemText primary="Phone" secondary="+1 817 239 3031" />
-                </ListItem>
-                <ListItem>
-                  <ListItemText
-                    primary="Email"
-                    secondary="contact@mustafamousa.com"
-                  />
-                </ListItem>
-              </List>
+          ))}
+        </div>
+        <div className="space-y-10">
+          <div className="flex">
+            <p className="bg-gradient-to-r from-sky-500 to-purple-500 w-auto text-2xl p-2 text-white">
+              my education.
+            </p>
+          </div>
+          {education.map((edu) => (
+            <div>
+              <div></div>
+              <div>
+                <p className="text-xl font-bold">{edu.location}</p>
+                <p className="text-lg mb-2">
+                  {edu.type} - {edu.period}
+                </p>
+                <p className="text-sm">{edu.description}</p>
+              </div>
             </div>
-          </Grid>
-        </Grid> */}
-        <h2 className="section-header">Experience</h2>
-        {/* <Grid container spacing={2}>
-          {experience.map((job, i) => (
-            <Grow in={true} timeout={i * 500 + 1000}>
-              <Grid item width="100%">
-                <div className="experience-bubble-container" key={i}>
-                  <Grid container spacing={2} direction={"row"}>
-                    <Grid item xs={12} lg={3}>
-                      <Typography variant="h6">{job.company}</Typography>
-                      <Typography variant="caption">
-                        {job.period} - {job.type}
-                      </Typography>
-                    </Grid>
-                    <Grid item xs={12} lg={9}>
-                      <Typography variant="h6">{job.title}</Typography>
-                      {job.bullets.map((bullet, idx) => (
-                        <ListItem key={idx}>
-                          <ListItemText
-                            primary={
-                              <Typography variant="body2">{bullet}</Typography>
-                            }
-                          />
-                        </ListItem>
-                      ))}
-                    </Grid>
-                  </Grid>
-                </div>
-              </Grid>
-            </Grow>
           ))}
-        </Grid> */}
-        <h2 className="section-header">Education</h2>
-        {/* <Grid container spacing={2}>
-          {education.map((edu, i) => (
-            <Grow in={true} timeout={i * 500 + 1000}>
-              <Grid item key={i} width="100%">
-                <div className="education-bubble-container">
-                  <Grid container direction="column" spacing={2}>
-                    <Grid item xs={12} lg={3}>
-                      <SchoolIcon />
-                      <Typography variant="h6">{edu.type}</Typography>
-                      <Typography variant="caption">{edu.location}</Typography>
-                    </Grid>
-                    <Grid item xs={12} lg={9}>
-                      <Typography variant="body2">{edu.description}</Typography>
-                    </Grid>
-                  </Grid>
-                </div>
-              </Grid>
-            </Grow>
-          ))}
-        </Grid> */}
+        </div>
       </div>
     </section>
   );
