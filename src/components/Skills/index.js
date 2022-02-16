@@ -19,21 +19,27 @@ const myskills = [
 const Skills = () => {
   return (
     <section id="skills">
-      <div className="section">
-        <h2 className="section-header">Technical skills</h2>
-        <div>
-          {myskills.map((skill, i) => (
-            <div className="skill-bubble-container flex-column-center-center">
-              {skill.name !== "SQLAlchemy" && (
-                <img
-                  src={skill.icon}
-                  alt="skill"
-                  style={{ width: 50, height: 50 }}
-                />
-              )}
-              <p>{skill.name}</p>
-            </div>
-          ))}
+      <div className="container mx-auto min-h-screen p-20 space-y-20">
+        <div className="space-y-10">
+          <div className="flex">
+            <p className="bg-gradient-to-r from-sky-500 to-purple-500 w-auto text-2xl p-2 text-white">
+              my technical skills.
+            </p>
+          </div>
+          <div className="flex flex-wrap">
+            {myskills.map((skill) => (
+              <div className="flex flex-col items-center justify-center bg-slate-50 rounded-lg w-[150px] h-[150px] m-5 space-y-2 shadow-md transition ease-in-out hover:scale-110">
+                {skill.name !== "SQLAlchemy" && (
+                  <img
+                    src={skill.icon}
+                    alt="skill"
+                    style={{ width: 50, height: 50 }}
+                  />
+                )}
+                <p className="text-lg select-none">{skill.name}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
