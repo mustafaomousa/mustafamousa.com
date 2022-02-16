@@ -73,7 +73,7 @@ const About = () => {
               </div>
               <img
                 src={aboutme}
-                className="float-left max-w-[125px] mr-4 rounded-lg grayscale shadow-lg mx-auto "
+                className="float-left max-w-[80px] md:max-w-[125px] mr-4 rounded-lg grayscale shadow-lg mx-auto "
               />
               <p className="pixel-antialiased text-lg md:text-xl lg:text-3xl font-bold text-slate-300">
                 I'm currently a software engineer with over four years of

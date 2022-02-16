@@ -21,6 +21,7 @@ const Navigation = ({ sections }) => {
       } z-[100] transition-shadow duration-300 ease-in-out`}
     >
       <div className="flex justify-between items-center h-14 mx-auto">
+        <p className="text-lg font-bold text-sky-100">Mustafa Mousa</p>
         <div className="space-x-4">
           {sections.map((section) => (
             <a
@@ -31,13 +32,6 @@ const Navigation = ({ sections }) => {
               {section.name}
             </a>
           ))}
-        </div>
-        <div className="space-x-4">
-          <div className="hover:from-purple-500 hover:to-sky-500 rounded-full bg-gradient-to-r from-sky-500 to-purple-500">
-            <button className="rounded-full bg-[#2E3544] m-0.5 pl-2.5 pr-2.5 pt-0.2 pb-0.2 text-white">
-              Connect
-            </button>
-          </div>
         </div>
       </div>
     </nav>
