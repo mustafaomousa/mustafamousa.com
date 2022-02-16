@@ -74,7 +74,7 @@ const About = () => {
               src={aboutme}
               className="float-left max-w-[125px] mr-4 rounded-lg grayscale shadow-lg mx-auto "
             />
-            <p className="pixel-antialiased text-lg md:text-xl lg:text-3xl font-bold text-slate-400">
+            <p className="pixel-antialiased text-lg md:text-xl lg:text-3xl font-bold text-slate-300">
               I'm currently a software engineer with over four years of
               experience in technology implementations and training. I'm from
               Texas. I engineer and develop full stack applications. I like to
@@ -88,7 +88,7 @@ const About = () => {
                 my experience.
               </span>
             </div>
-            <div className="space-y-5">
+            <div className="space-y-10">
               {experience.map((job) => (
                 <div className="rounded-lg shadow-lg hover:scale-105 px-10 py-5 bg-slate-800 transition ease-in-out ">
                   <div className="mb-5">
@@ -97,6 +97,9 @@ const About = () => {
                     </p>
                     <p className="antialiased text-lg md:text-md font-bold text-sky-500">
                       {job.title}
+                    </p>
+                    <p className="antialiased text-sm text-sky-100">
+                      {job.period}
                     </p>
                   </div>
                   <div>
@@ -118,19 +121,23 @@ const About = () => {
                 my education.
               </span>
             </div>
-            <div className="space-y-5">
+            <div className="space-y-10">
               {education.map((edu) => (
-                <div>
-                  <div></div>
-                  <div>
-                    <p className="text-xl font-bold text-slate-100">
+                <div className="rounded-lg shadow-lg hover:scale-105 px-10 py-5 bg-slate-900 transition ease-in-out ">
+                  <div className="mb-5">
+                    <p className="pixel-antialiased text-lg md:text-lg font-extrabold text-white">
                       {edu.location}
                     </p>
-                    <p className="text-md pb-2 text-slate-100">
-                      {edu.type} - {edu.period}
+                    <p className="antialiased text-lg md:text-md font-bold text-sky-500">
+                      {edu.type}
                     </p>
-                    <p className="text-sm text-slate-400">
-                      - {edu.description}
+                    <p className="antialiased text-sm text-sky-100">
+                      {edu.period}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="antialiased leading-relaxed text-md text-slate-400 ">
+                      {edu.description}
                     </p>
                   </div>
                 </div>

@@ -11,9 +11,9 @@ const myskills = [
   { name: "Express", icon: icons.express },
   { name: "PostgreSQL", icon: icons.postgresql },
   { name: "Sequelize", icon: icons.sequelize },
-  { name: "SQLAlchemy" },
   { name: "MongoDb", icon: icons.mongodb },
   { name: "Cypress", icon: icons.cypress },
+  { name: "SQLAlchemy" },
 ];
 
 const Skills = () => {
@@ -27,16 +27,18 @@ const Skills = () => {
         </div>
         <div className="flex flex-wrap gap-5">
           {myskills.map((skill) => (
-            <div className="flex flex-col items-center justify-center bg-white w-[120px] h-[120px] space-y-1 shadow-lg transition ease-in-out hover:scale-110 rounded-xl">
+            <div className="flex flex-col items-center justify-center w-[120px] h-[120px] space-y-1  transition ease-in-out hover:scale-110 rounded-xl">
               {skill.name !== "SQLAlchemy" && (
                 <img
-                  className="select-none"
+                  className="select-none bg-sky-500 p-5 rounded-full"
                   src={skill.icon}
                   alt="skill"
-                  style={{ width: 30, height: 30 }}
+                  style={{ width: 80, height: 80 }}
                 />
               )}
-              <p className="text-md select-none">{skill.name}</p>
+              <p className="text-md select-none text-white font-bold">
+                {skill.name}
+              </p>
             </div>
           ))}
         </div>

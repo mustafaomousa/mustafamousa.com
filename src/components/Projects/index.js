@@ -86,21 +86,25 @@ const Projects = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-5">
           {projects.map((project) => (
-            <div className="max-w-[430px] bg-white shadow-lg rounded-xl">
+            <div className="max-w-[430px] bg-slate-900 shadow-lg rounded-xl">
               <div>
                 <img
                   className="aspect-[3/2] w-full rounded-t-xl"
                   src={project.screenshot}
                 />
               </div>
-              <div className="flex flex-col items-between p-3">
+              <div className="flex flex-col items-between px-6 py-3">
                 <div className="">
-                  <p className="text-lg font-bold mb-1">{project.name}</p>
-                  <p className="text-sm mb-5">{project.description}</p>
+                  <p className="text-lg font-bold mb-1 text-white">
+                    {project.name}
+                  </p>
+                  <p className="text-md mb-5 text-sky-500">
+                    {project.description}
+                  </p>
                 </div>
                 <div className="flex flex-wrap">
                   {project.technologies.map((technology) => (
-                    <div className="flex items-center justify-center mr-3 mb-3">
+                    <div className="flex items-center justify-center mr-3 mb-3 bg-white px-2 py-1 rounded-full">
                       {technology.name !== "SQLAlchemy" && (
                         <img
                           className="w-[15px] mr-2"
