@@ -86,13 +86,13 @@ const Projects = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-5">
           {projects.map((project) => (
-            <div className="max-w-[430px] bg-slate-900 shadow-lg rounded-xl">
-              <div>
+            <div className="flex flex-col justify-between max-w-[430px] bg-slate-900 shadow-lg rounded-xl">
+              {/* <div>
                 <img
                   className="aspect-[3/2] w-full rounded-t-xl"
                   src={project.screenshot}
                 />
-              </div>
+              </div> */}
               <div className="flex flex-col items-between px-6 py-3">
                 <div className="">
                   <p className="text-lg font-bold mb-1 text-white">
@@ -104,7 +104,7 @@ const Projects = () => {
                 </div>
                 <div className="flex flex-wrap">
                   {project.technologies.map((technology) => (
-                    <div className="flex items-center justify-center mr-3 mb-3 bg-white px-2 py-1 rounded-full">
+                    <div className="flex items-center justify-center mr-3 mb-3 bg-slate-400 px-2 py-1 rounded-full">
                       {technology.name !== "SQLAlchemy" && (
                         <img
                           className="w-[15px] mr-2"
@@ -116,6 +116,14 @@ const Projects = () => {
                     </div>
                   ))}
                 </div>
+              </div>
+              <div className="grid grid-cols-2">
+                <button className="hover:bg-sky-500 rounded-bl-lg h-10 text-slate-300">
+                  Live site
+                </button>
+                <button className="hover:bg-sky-500 rounded-br-lg h-10 text-slate-300">
+                  GitHub
+                </button>
               </div>
             </div>
           ))}
