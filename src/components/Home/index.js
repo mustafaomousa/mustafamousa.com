@@ -1,7 +1,7 @@
 const Home = () => {
   return (
     <section id="home">
-      <div className="flex items-center justify-center pl-12 pr-12 min-h-screen">
+      <div className="flex items-center justify-center pl-12 pr-12 min-h-[50vh]">
         <div className="space-y-4 flex flex-col justify-end">
           <p className="antialiased text-white text-xl md:text-4xl lg:text-6xl 2xl:text-8xl">
             Hey there
