@@ -54,92 +54,109 @@ const education = [
   },
 ];
 
+const info = [
+  { type: "Name", value: "Mustafa Mousa" },
+  { type: "Location", value: "Dallas, Texas" },
+];
+
 const About = () => {
   return (
-    <section className="bg-sky-100" id="about">
-      <div className="container mx-auto min-h-[50vh] p-20 space-y-20">
-        <div className="space-y-10">
-          <div className="text-4xl font-extrabold flex">
+    <section id="about">
+      <div className="container mx-auto pt-20 pb-20 pl-5 pr-5 space-y-10">
+        <div>
+          <div className="text-4xl font-extrabold flex pb-5">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-purple-500">
               a little about me.
             </span>
           </div>
-          <div>
-            <p className="mb-1 text-sm font-bold">Name</p>
-            <p className="antialiased text-md md:text-lg lg:text-xl">
-              Mustafa Mousa
-            </p>
-          </div>
-          <div>
-            <p className="mb-1 text-sm font-bold">Location</p>
-            <p className="antialiased text-md md:text-lg lg:text-xl">
-              Dallas, Texas
-            </p>
-          </div>
-          <div>
-            <p className="mb-1 text-sm font-bold">Phone</p>
-            <p className="antialiased text-md md:text-lg lg:text-xl">
-              +1 817 239 3031
-            </p>
-          </div>
-          <div>
-            <p className="mb-1 text-sm font-bold">Email</p>
-            <p className="antialiased text-md md:text-lg lg:text-xl">
-              contact@mustafamousa.com
-            </p>
-          </div>
-          <div>
-            <p className="mb-1 text-sm font-bold">Summary</p>
-            <p className="antialiased text-md md:text-lg lg:text-xl">
-              I'm currently a software engineer with over four years of
-              experience in technology implementations and training. I'm from
-              Fort Worth, Texas. I engineer and develop full stack applications.
-              I like to work with a collaborative team and amazing companies
-              that provide growth.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div>
+              <img src={aboutme} className="float-left w-[80px] mr-2" />
+              <p className="antialiased text-md md:text-lg text-slate-100">
+                I'm currently a software engineer with over four years of
+                experience in technology implementations and training. I'm from
+                Texas. I engineer and develop full stack applications. I like to
+                work with a collaborative team and amazing companies that
+                provide growth.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <div>
+                <p className="text-sm font-bold text-slate-500">Name</p>
+                <p className="antialiased text-md md:text-lg text-slate-100">
+                  Mustafa Mousa
+                </p>
+              </div>
+              <div>
+                <p className="text-sm font-bold text-slate-500">Location</p>
+                <p className="antialiased text-md md:text-lg text-slate-100">
+                  Dallas, Texas
+                </p>
+              </div>
+              <div>
+                <p className="text-sm font-bold text-slate-500">Phone</p>
+                <p className="antialiased text-md md:text-lg text-slate-100">
+                  +1 817 239 3031
+                </p>
+              </div>
+              <div>
+                <p className="text-sm font-bold text-slate-500">Email</p>
+                <p className="antialiased text-md md:text-lg text-slate-100">
+                  contact@mustafamousa.com
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="space-y-10">
-          <div className="text-4xl font-extrabold flex">
+        <div>
+          <div className="text-4xl font-extrabold flex pb-5">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-purple-500">
               my experience.
             </span>
           </div>
-          {experience.map((job) => (
-            <div>
-              <div></div>
+          <div className="space-y-5">
+            {experience.map((job) => (
               <div>
-                <p className="text-xl font-bold">{job.company}</p>
-                <p className="text-lg mb-2">{job.title}</p>
-                <ul className="list-disc pl-10">
-                  {job.bullets.map((point) => (
-                    <li>
-                      <p className="text-sm">{point}</p>
-                    </li>
-                  ))}
-                </ul>
+                <div></div>
+                <div>
+                  <p className="text-xl font-bold text-slate-100">
+                    {job.company}
+                  </p>
+                  <p className="text-md pb-2 text-slate-100">{job.title}</p>
+                  <ul className="">
+                    {job.bullets.map((point) => (
+                      <li className="text-sm text-slate-400">
+                        <p>- {point}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-        <div className="space-y-10">
-          <div className="text-4xl font-extrabold flex">
+        <div>
+          <div className="text-4xl font-extrabold flex pb-5">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-purple-500">
               my education.
             </span>
           </div>
-          {education.map((edu) => (
-            <div>
-              <div></div>
+          <div className="space-y-5">
+            {education.map((edu) => (
               <div>
-                <p className="text-lg font-bold">{edu.location}</p>
-                <p className="text-md mb-2">
-                  {edu.type} - {edu.period}
-                </p>
-                <p className="text-sm">{edu.description}</p>
+                <div></div>
+                <div>
+                  <p className="text-xl font-bold text-slate-100">
+                    {edu.location}
+                  </p>
+                  <p className="text-md pb-2 text-slate-100">
+                    {edu.type} - {edu.period}
+                  </p>
+                  <p className="text-sm text-slate-400">- {edu.description}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

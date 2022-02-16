@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
     <section id="contact">
-      <div className="container mx-auto min-h-[50vh] p-20 space-y-10 flex items-start flex-col">
+      <div className="container mx-auto pt-20 pb-20 pl-5 pr-5 space-y-10">
         <div className="text-4xl font-extrabold flex">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-purple-500">
             lets connect!
@@ -10,11 +10,11 @@ const Contact = () => {
         <div className="space-y-3 w-full max-w-[400px]">
           <div>
             <p className="text-slate-300 font-bold pb-2 pl-2">Name</p>
-            <input className="text-xl rounded-full pl-3 pr-2 pt-0.5 pb-0.5 w-full" />
+            <input className="text-xl rounded-xl pl-3 pr-2 pt-0.5 pb-0.5 w-full" />
           </div>
           <div>
             <p className="text-slate-300 font-bold pb-2 pl-2">Email</p>
-            <input className="text-xl rounded-full pl-3 pr-2 pt-0.5 pb-0.5 w-full" />
+            <input className="text-xl rounded-xl pl-3 pr-2 pt-0.5 pb-0.5 w-full" />
           </div>
           <div>
             <p className="text-slate-300 font-bold pb-2 pl-2">Message</p>

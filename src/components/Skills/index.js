@@ -18,28 +18,27 @@ const myskills = [
 
 const Skills = () => {
   return (
-    <section className="bg-sky-100" id="skills">
-      <div className="container mx-auto min-h-[50vh] p-20 space-y-20">
-        <div className="space-y-10">
-          <div className="text-4xl font-extrabold flex">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-purple-500">
-              my technical skills
-            </span>
-          </div>
-          <div className="flex flex-wrap">
-            {myskills.map((skill) => (
-              <div className="flex flex-col items-center justify-center bg-slate-50 w-[150px] h-[150px] m-5 space-y-2 shadow-md transition ease-in-out hover:scale-110">
-                {skill.name !== "SQLAlchemy" && (
-                  <img
-                    src={skill.icon}
-                    alt="skill"
-                    style={{ width: 50, height: 50 }}
-                  />
-                )}
-                <p className="text-lg select-none">{skill.name}</p>
-              </div>
-            ))}
-          </div>
+    <section id="skills">
+      <div className="container mx-auto pt-20 pb-20 pl-5 pr-5 space-y-10">
+        <div className="text-4xl font-extrabold flex">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-purple-500">
+            my technical skills
+          </span>
+        </div>
+        <div className="flex flex-wrap gap-5">
+          {myskills.map((skill) => (
+            <div className="flex flex-col items-center justify-center bg-white w-[120px] h-[120px] space-y-1 shadow-lg transition ease-in-out hover:scale-110 rounded-xl">
+              {skill.name !== "SQLAlchemy" && (
+                <img
+                  className="select-none"
+                  src={skill.icon}
+                  alt="skill"
+                  style={{ width: 30, height: 30 }}
+                />
+              )}
+              <p className="text-md select-none">{skill.name}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

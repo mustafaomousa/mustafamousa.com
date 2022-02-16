@@ -77,54 +77,40 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="bg-sky-100" id="projects">
-      <div className="container mx-auto min-h-[50vh] p-20 space-y-10">
+    <section id="projects">
+      <div className="container mx-auto pt-20 pb-20 pl-5 pr-5 space-y-10">
         <div className="text-4xl font-extrabold flex">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-purple-500">
             some of my work.
           </span>
         </div>
-        <div className="space-y-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-5">
           {projects.map((project) => (
-            <div>
-              <div className="flex justify-end mb-4 space-x-3">
-                <div className="hover:from-purple-500 hover:to-sky-500 rounded-full bg-gradient-to-r from-sky-500 to-purple-500">
-                  <button className="rounded-full bg-slate-200 m-0.5 pl-2.5 pr-2.5">
-                    GitHub
-                  </button>
-                </div>
-                <div className="hover:from-purple-500 hover:to-sky-500 rounded-full bg-gradient-to-r from-sky-500 to-purple-500">
-                  <button className="rounded-full bg-slate-200 m-0.5 pl-2.5 pr-2.5">
-                    Live Site
-                  </button>
-                </div>
+            <div className="max-w-[430px] bg-white shadow-lg rounded-xl">
+              <div>
+                <img
+                  className="aspect-[3/2] w-full rounded-t-xl"
+                  src={project.screenshot}
+                />
               </div>
-              <div className="flex  justify-between bg-white shadow-lg">
-                <div className="flex flex-col justify-between p-10">
-                  <div className="">
-                    <p className="text-2xl font-bold mb-2">{project.name}</p>
-                    <p className="text-md mb-5">{project.description}</p>
-                  </div>
-                  <div className="flex flex-wrap">
-                    {project.technologies.map((technology) => (
-                      <div className="flex mr-2 items-center justify-center w-[100px] h-[50px] transition ease-in-out hover:scale-110">
-                        {technology.name !== "SQLAlchemy" && (
-                          <img
-                            className="w-[20px] mr-2"
-                            src={technology.icon}
-                            alt="skill"
-                          />
-                        )}
-                        <p className="text-sm select-none">{technology.name}</p>
-                      </div>
-                    ))}
-                  </div>
+              <div className="flex flex-col items-between p-3">
+                <div className="">
+                  <p className="text-lg font-bold mb-1">{project.name}</p>
+                  <p className="text-sm mb-5">{project.description}</p>
                 </div>
-                <div className="max-w-[500px]">
-                  <img
-                    className="object-contain p-10"
-                    src={project.screenshot}
-                  />
+                <div className="flex flex-wrap">
+                  {project.technologies.map((technology) => (
+                    <div className="flex items-center justify-center mr-3 mb-3">
+                      {technology.name !== "SQLAlchemy" && (
+                        <img
+                          className="w-[15px] mr-2"
+                          src={technology.icon}
+                          alt="skill"
+                        />
+                      )}
+                      <p className="text-sm select-none">{technology.name}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
