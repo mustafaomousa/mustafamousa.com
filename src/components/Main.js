@@ -6,7 +6,7 @@ import Contact from "./Contact";
 
 const Main = () => {
   return (
-    <div>
+    <div className="scroll-smooth pt-14">
       <Home />
       <About />
       <Skills />

@@ -3,22 +3,7 @@ import audifamilyThread from "./audifamily-thread.png";
 import encephascapeBrainfolio from "./encephascape-brainfolio.png";
 import careBnbHome from "./carebnb-home.png";
 import icons from "../../icons";
-
-const myskills = [
-  { name: "JavaScript", icon: icons.javascript },
-  { name: "Python", icon: icons.python },
-  { name: "NodeJS", icon: icons.nodedotjs },
-  { name: "TypeScript", icon: icons.typescript },
-  { name: "React", icon: icons.react },
-  { name: "React Native", icon: icons.react },
-  { name: "Flask", icon: icons.flask },
-  { name: "Express", icon: icons.express },
-  { name: "PostgreSQL", icon: icons.postgresql },
-  { name: "Sequelize", icon: icons.sequelize },
-  { name: "SQLAlchemy" },
-  { name: "MongoDb", icon: icons.mongodb },
-  { name: "Cypress", icon: icons.cypress },
-];
+import { useNavigate } from "react-router-dom";
 
 const projects = [
   {
@@ -33,6 +18,8 @@ const projects = [
       { name: "PostgreSQL", icon: icons.postgresql },
     ],
     screenshot: rumblrHome,
+    github: "https://github.com/mustafaomousa/Rumblr",
+    site: "https://rumblr-app.herokuapp.com/",
   },
   {
     name: "audifamily",
@@ -46,6 +33,8 @@ const projects = [
       { name: "SQLAlchemy" },
     ],
     screenshot: audifamilyThread,
+    github: "https://github.com/mustafaomousa/audifamily",
+    site: "https://audifamily.herokuapp.com/",
   },
   {
     name: "EncephaScape",
@@ -59,6 +48,8 @@ const projects = [
       { name: "PostgreSQL", icon: icons.postgresql },
     ],
     screenshot: encephascapeBrainfolio,
+    github: "https://github.com/mustafaomousa/EncephaScape",
+    site: "https://encephascape.herokuapp.com/",
   },
   {
     name: "CareBnb",
@@ -72,6 +63,8 @@ const projects = [
       { name: "SQLAlchemy" },
     ],
     screenshot: careBnbHome,
+    github: "https://github.com/QuintinHull/CareBnB",
+    site: "https://care-b-n-b.herokuapp.com/",
   },
 ];
 
@@ -84,15 +77,15 @@ const Projects = () => {
             some of my work.
           </span>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10">
           {projects.map((project) => (
-            <div className="flex flex-col justify-between max-w-[430px] bg-slate-900 shadow-lg rounded-xl">
-              {/* <div>
+            <div className="flex flex-col justify-between min-w-[300px] max-w-[430px] bg-slate-900 shadow-lg rounded-xl">
+              <div>
                 <img
                   className="aspect-[3/2] w-full rounded-t-xl"
                   src={project.screenshot}
                 />
-              </div> */}
+              </div>
               <div className="flex flex-col items-between px-6 py-3">
                 <div className="">
                   <p className="text-lg font-bold mb-1 text-white">
@@ -118,12 +111,20 @@ const Projects = () => {
                 </div>
               </div>
               <div className="grid grid-cols-2">
-                <button className="hover:bg-sky-500 rounded-bl-lg h-10 text-slate-300">
+                <a
+                  className="hover:bg-sky-500 rounded-bl-lg h-10 text-slate-300 flex items-center justify-center"
+                  href={project.site}
+                  target="_blank"
+                >
                   Live site
-                </button>
-                <button className="hover:bg-sky-500 rounded-br-lg h-10 text-slate-300">
+                </a>
+                <a
+                  className="hover:bg-sky-500 rounded-br-lg h-10 text-slate-300 flex items-center justify-center"
+                  href={project.github}
+                  target="_blank"
+                >
                   GitHub
-                </button>
+                </a>
               </div>
             </div>
           ))}
