@@ -56,13 +56,13 @@ const education = [
 
 const About = () => {
   return (
-    <section className="bg-slate-300" id="about">
+    <section className="bg-slate-200" id="about">
       <div className="container mx-auto min-h-screen p-20 space-y-20">
         <div className="space-y-10">
-          <div className="flex">
-            <p className="bg-gradient-to-r from-sky-500 to-purple-500 w-auto text-2xl p-2 text-white">
+          <div className="text-4xl font-extrabold flex">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-purple-500">
               a little about me.
-            </p>
+            </span>
           </div>
           <div>
             <p className="mb-1 text-sm font-bold">Name</p>
@@ -100,10 +100,10 @@ const About = () => {
           </div>
         </div>
         <div className="space-y-10">
-          <div className="flex">
-            <p className="bg-gradient-to-r from-sky-500 to-purple-500 w-auto text-2xl p-2 text-white">
+          <div className="text-4xl font-extrabold flex">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-purple-500">
               my experience.
-            </p>
+            </span>
           </div>
           {experience.map((job) => (
             <div>
@@ -123,17 +123,17 @@ const About = () => {
           ))}
         </div>
         <div className="space-y-10">
-          <div className="flex">
-            <p className="bg-gradient-to-r from-sky-500 to-purple-500 w-auto text-2xl p-2 text-white">
+          <div className="text-4xl font-extrabold flex">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-purple-500">
               my education.
-            </p>
+            </span>
           </div>
           {education.map((edu) => (
             <div>
               <div></div>
               <div>
-                <p className="text-xl font-bold">{edu.location}</p>
-                <p className="text-lg mb-2">
+                <p className="text-lg font-bold">{edu.location}</p>
+                <p className="text-md mb-2">
                   {edu.type} - {edu.period}
                 </p>
                 <p className="text-sm">{edu.description}</p>
