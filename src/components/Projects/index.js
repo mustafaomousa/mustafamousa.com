@@ -71,15 +71,12 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section
-      id="projects"
-      className="bg-gradient-to-b from-indigo-100 to-purple-100"
-    >
+    <section id="projects">
       <SectionContainer>
         <SectionTitle>some of my work.</SectionTitle>
         <div className="flex overflow-scroll snap-x space-x-5 pb-5">
           {projects.map((project) => (
-            <div className="snap-start shadow-md rounded snap-start min-w-[320px] bg-white">
+            <div className="snap-start shadow rounded snap-start min-w-[320px] bg-white">
               <div className="flex flex-col justify-between">
                 <div>
                   <img

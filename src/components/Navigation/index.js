@@ -16,8 +16,8 @@ const Navigation = ({ sections }) => {
 
   return (
     <nav
-      className={`pl-10 pr-10 fixed w-full bg-purple-100 ${
-        atTop ? "" : "shadow-md bg-purple-50"
+      className={`pl-10 pr-10 fixed w-full bg-purple-500 ${
+        atTop ? "" : "shadow-md"
       } z-[100] transition-all duration-300 ease-in-out`}
     >
       <div className="flex justify-end items-center h-[50px] mx-auto space-x-5">

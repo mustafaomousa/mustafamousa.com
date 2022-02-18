@@ -20,12 +20,12 @@ const myskills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="bg-indigo-100">
+    <section id="skills">
       <SectionContainer>
         <SectionTitle>my technical skills and tools.</SectionTitle>
         <div className="flex snap-x snap-mandatory overflow-scroll space-x-5 pb-5">
           {myskills.map((skill) => (
-            <div className="shadow border rounded-full snap-start flex flex-col items-center justify-center bg-white min-w-[90px] min-h-[90px]">
+            <div className="shadow rounded-full snap-start flex flex-col items-center justify-center bg-white min-w-[90px] min-h-[90px]">
               {skill.name !== "SQLAlchemy" ? (
                 <img className="w-[30px] h-[30px]" src={skill.icon} />
               ) : (

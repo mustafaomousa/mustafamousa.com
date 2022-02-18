@@ -1,3 +1,6 @@
+import SectionContainer from "../../styled/SectionContainer";
+import SectionTitle from "../../styled/SectionTitle";
+
 const experience = [
   {
     title: "Content Manager",
@@ -36,26 +39,35 @@ const experience = [
 ];
 
 const Experience = () => {
-  return experience.map((job) => (
-    <div className="border rounded shadow hover:scale-[102%] hover:shadow-lg p-4 bg-white transition-all ease-in-out">
-      <div className="mb-5">
-        <div className="flex text-stone-700 text-sm lg:text-md">
-          <p className="grow">{job.company}</p>
-          <p>{job.period}</p>
-        </div>
-        <p className="text-sm text-purple-600 font-bold">{job.title}</p>
-      </div>
-      <div>
-        <ul className="list-none space-y-3 text-sm lg:text-md text-stone-700">
-          {job.bullets.map((point) => (
-            <li>
-              <p>{point}</p>
-            </li>
+  return (
+    <section id="experience">
+      <SectionContainer>
+        <SectionTitle>my experience.</SectionTitle>
+        <div className="space-y-5">
+          {experience.map((job) => (
+            <div className="p-5 shadow hover:shadow-md bg-white">
+              <div className="mb-5 font-bold">
+                <div className="flex text-stone-700 text-sm lg:text-md">
+                  <p className="grow">{job.company}</p>
+                  <p>{job.period}</p>
+                </div>
+                <p className="text-sm text-purple-800">{job.title}</p>
+              </div>
+              <div>
+                <ul className="list-none space-y-3 text-sm lg:text-md text-stone-700">
+                  {job.bullets.map((point) => (
+                    <li>
+                      <p>{point}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           ))}
-        </ul>
-      </div>
-    </div>
-  ));
+        </div>
+      </SectionContainer>
+    </section>
+  );
 };
 
 export default Experience;

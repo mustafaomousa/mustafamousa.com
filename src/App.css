@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  background-color: #fef9f8;
+}
+
 .section-header {
   padding: 40px 0 20px 0;
 }
