@@ -1,18 +1,28 @@
+import SectionContainer from "../../styled/SectionContainer";
+import SectionTitle from "../../styled/SectionTitle";
+
 const Contact = () => {
   return (
-    <section id="contact">
-      <div className="container mx-auto pt-20 pb-20 pl-5 pr-5 space-y-10">
-        <div className="text-4xl font-extrabold flex">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-purple-500">
-            lets connect!
-          </span>
+    <section id="contact" className="bg-purple-100">
+      <SectionContainer>
+        {/* <SectionTitle>let's connect!</SectionTitle> */}
+        <div className="flex justify-center space-x-5">
+          <div>
+            <p className="text-xs text-stone-500">Phone</p>
+            <p className="text-md text-purple-700 font-bold">+1 817 239 3031</p>
+          </div>
+          <div>
+            <p className="text-xs text-stone-500">Email</p>
+            <p className="text-md text-purple-700 font-bold">
+              contact@mustafamousa.com
+            </p>
+          </div>
+          <div>
+            <p className="text-xs text-stone-500">LinkedIn</p>
+            <a className="text-md text-purple-700 font-bold">External Link</a>
+          </div>
         </div>
-        <div className="flex justify-evenly">
-          <p className="text-2xl text-sky-100">+1 817 239 3031</p>
-          <p className="text-2xl text-sky-100">contact@mustafamousa.com</p>
-          <p className="text-2xl text-sky-100">LinkedIn</p>
-        </div>
-      </div>
+      </SectionContainer>
     </section>
   );
 };

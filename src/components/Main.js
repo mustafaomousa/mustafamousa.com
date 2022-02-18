@@ -6,12 +6,12 @@ import Contact from "./Contact";
 
 const Main = () => {
   return (
-    <div className="scroll-smooth pt-14 select-none">
+    <div className="scroll-smooth select-none">
       <Home />
       <About />
       <Skills />
       <Projects />
-      <Contact />
+      {/* <Contact /> */}
     </div>
   );
 };

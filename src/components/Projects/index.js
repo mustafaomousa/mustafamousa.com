@@ -3,7 +3,8 @@ import audifamilyThread from "./audifamily-thread.png";
 import encephascapeBrainfolio from "./encephascape-brainfolio.png";
 import careBnbHome from "./carebnb-home.png";
 import icons from "../../icons";
-import { useNavigate } from "react-router-dom";
+import SectionTitle from "../../styled/SectionTitle";
+import SectionContainer from "../../styled/SectionContainer";
 
 const projects = [
   {
@@ -70,66 +71,67 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects">
-      <div className="container mx-auto pt-20 pb-20 pl-5 pr-5 space-y-10">
-        <div className="text-4xl font-extrabold flex">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-purple-500">
-            some of my work.
-          </span>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10">
+    <section
+      id="projects"
+      className="bg-gradient-to-b from-indigo-100 to-purple-100"
+    >
+      <SectionContainer>
+        <SectionTitle>some of my work.</SectionTitle>
+        <div className="flex overflow-scroll snap-x space-x-5 pb-5">
           {projects.map((project) => (
-            <div className="mx-auto select-none flex flex-col justify-between min-w-[300px] max-w-[430px] bg-slate-900 shadow-lg rounded-xl transition ease-in-out hover:scale-110 ">
-              {/* <div>
-                <img
-                  className="aspect-[3/2] w-full rounded-t-xl"
-                  src={project.screenshot}
-                />
-              </div> */}
-              <div className="flex flex-col items-between px-4 py-3">
-                <div className="">
-                  <p className="text-lg font-bold mb-1 text-white">
-                    {project.name}
-                  </p>
-                  <p className="text-md mb-5 text-slate-400">
-                    {project.description}
-                  </p>
+            <div className="shadow-md rounded snap-start min-w-[320px] bg-white">
+              <div className="flex flex-col justify-between">
+                <div>
+                  <img
+                    className="aspect-[3/2] w-full rounded-t"
+                    src={project.screenshot}
+                  />
                 </div>
-                <div className="flex flex-wrap">
-                  {project.technologies.map((technology) => (
-                    <div className="flex items-center justify-center mr-3 mb-3 bg-slate-400 px-2 py-1 rounded-full">
-                      {technology.name !== "SQLAlchemy" && (
-                        <img
-                          className="w-[15px] mr-2"
-                          src={technology.icon}
-                          alt="skill"
-                        />
-                      )}
-                      <p className="text-sm select-none">{technology.name}</p>
-                    </div>
-                  ))}
+                <div className="flex flex-col items-between px-4 py-3">
+                  <div className="">
+                    <p className="text-md font-bold mb-1 text-purple-600">
+                      {project.name}
+                    </p>
+                    <p className="text-sm mb-5 text-stone-700">
+                      {project.description}
+                    </p>
+                  </div>
+                  <div className="flex flex-wrap">
+                    {project.technologies.map((technology) => (
+                      <div className="flex items-center justify-center mr-3 mb-3 bg-indigo-100 px-2 py-1 rounded-full">
+                        {technology.name !== "SQLAlchemy" && (
+                          <img
+                            className="w-[15px] mr-2"
+                            src={technology.icon}
+                            alt="skill"
+                          />
+                        )}
+                        <p className="text-sm select-none">{technology.name}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <div className="grid grid-cols-2">
-                <a
-                  className="hover:bg-sky-500 rounded-bl-lg h-10 text-slate-300 flex items-center justify-center"
-                  href={project.site}
-                  target="_blank"
-                >
-                  Live site
-                </a>
-                <a
-                  className="hover:bg-sky-500 rounded-br-lg h-10 text-slate-300 flex items-center justify-center"
-                  href={project.github}
-                  target="_blank"
-                >
-                  GitHub
-                </a>
+                <div className="grid grid-cols-2 bg-white rounded-b h-10 text-stone-700 uppercase text-xs">
+                  <a
+                    className="hover:bg-indigo-100 ease-in-out transition-all hover:rounded-bl flex items-center justify-center"
+                    href={project.site}
+                    target="_blank"
+                  >
+                    Live site
+                  </a>
+                  <a
+                    className="hover:bg-indigo-100 ease-in-out transition-all hover:rounded-br flex items-center justify-center"
+                    href={project.github}
+                    target="_blank"
+                  >
+                    GitHub
+                  </a>
+                </div>
               </div>
             </div>
           ))}
         </div>
-      </div>
+      </SectionContainer>
     </section>
   );
 };

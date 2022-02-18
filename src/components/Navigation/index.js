@@ -16,22 +16,36 @@ const Navigation = ({ sections }) => {
 
   return (
     <nav
-      className={`pl-10 pr-10 fixed w-full bg-[#2E3544] ${
-        atTop ? "" : "shadow-lg"
-      } z-[100] transition-shadow duration-300 ease-in-out`}
+      className={`pl-10 pr-10 fixed w-full bg-purple-100 ${
+        atTop ? "" : "shadow-md bg-purple-50"
+      } z-[100] transition-all duration-300 ease-in-out`}
     >
-      <div className="flex justify-between items-center h-14 mx-auto">
-        <p className="text-lg font-bold text-sky-100">Mustafa Mousa</p>
-        <div className="space-x-4">
-          {sections.map((section) => (
-            <a
-              className="text-slate-100 hover:underline underline-offset-2 decoration-sky-500"
-              key={section.name}
-              href={section.href}
-            >
-              {section.name}
-            </a>
-          ))}
+      <div className="flex justify-end items-center h-[50px] mx-auto space-x-5">
+        <div>
+          {/* <p className="text-xs text-stone-500">Phone</p> */}
+          <p className="text-sm text-purple-700">+1 817 239 3031</p>
+        </div>
+        <div>
+          {/* <p className="text-xs text-stone-500">Email</p> */}
+          <p className="text-sm text-purple-700">contact@mustafamousa.com</p>
+        </div>
+        <div>
+          {/* <p className="text-xs text-stone-500">LinkedIn</p> */}
+          <a
+            className="text-sm text-purple-700"
+            href="https://www.linkedin.com/in/mustafa-mousa-8b8053157/"
+          >
+            LinkedIn
+          </a>
+        </div>
+        <div>
+          {/* <p className="text-xs text-stone-500">LinkedIn</p> */}
+          <a
+            className="text-sm text-purple-700"
+            href="https://github.com/mustafaomousa"
+          >
+            GitHub
+          </a>
         </div>
       </div>
     </nav>

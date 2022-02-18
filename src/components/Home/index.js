@@ -1,25 +1,26 @@
-import proud from "./home-banner.png";
+import SectionContainer from "../../styled/SectionContainer";
+import proud from "./proud-se.svg";
 
 const Home = () => {
   return (
-    <section id="home">
-      <div className="container flex items-center justify-center mx-auto py-20 px-5 min-h-screen">
-        {/* <img
-          className="transition-all ease-in-out w-[100px] md:w-[150px] lg:w-[200px] aspect-auto"
-          src={proud}
-        /> */}
-        <div className="flex flex-col">
-          <p className="antialiased font-bold text-white text-3xl md:text-4xl lg:text-5xl">
-            I'm Mustafa,
-          </p>
-          <div className="text-4xl md:text-5xl lg:text-6xl font-extrabold flex ">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-purple-500 ">
-              a software engineer.
-            </span>
+    <section id="home" className="bg-purple-100">
+      <SectionContainer className="flex items-center px-5 mx-auto max-w-7xl  h-[50vh]">
+        <div className="w-full flex items-end justify-center space-x-5">
+          <img src={proud} className="aspect-[1/1] w-[110px] md:w-[200px]" />
+          <div className="flex flex-col">
+            <p className="antialiased text-indigo-500 text-2xl md:text-3xl lg:text-4xl font-bold">
+              Hey there
+            </p>
+            <div className="text-4xl md:text-5xl lg:text-6xl font-bold">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-500 ">
+                I'm Mustafa.
+              </span>
+            </div>
           </div>
         </div>
-      </div>
+      </SectionContainer>
     </section>
   );
 };
+
 export default Home;
