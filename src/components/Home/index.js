@@ -3,7 +3,7 @@ import proud from "./proud-se.svg";
 
 const Home = () => {
   return (
-    <section id="home" className="bg-purple-100">
+    <section id="home" className="bg-purple-100 pt-[50px]">
       <SectionContainer className="flex items-center px-5 mx-auto max-w-7xl  h-[50vh]">
         <div className="w-full flex items-end justify-center space-x-5">
           <img src={proud} className="aspect-[1/1] w-[110px] md:w-[200px]" />

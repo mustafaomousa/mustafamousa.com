@@ -23,7 +23,7 @@ const Skills = () => {
     <section id="skills" className="bg-indigo-100">
       <SectionContainer>
         <SectionTitle>my technical skills and tools.</SectionTitle>
-        <div className="flex snap-x snap-mandatory overflow-scroll space-x-8 pb-5">
+        <div className="flex snap-x snap-mandatory overflow-scroll space-x-5 pb-5">
           {myskills.map((skill) => (
             <div className="shadow border rounded-full snap-start flex flex-col items-center justify-center bg-white min-w-[90px] min-h-[90px]">
               {skill.name !== "SQLAlchemy" ? (
