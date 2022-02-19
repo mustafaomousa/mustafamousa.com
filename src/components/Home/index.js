@@ -11,9 +11,12 @@ const Home = () => {
   return (
     <section id="home">
       <SectionContainer className="flex items-center px-5 py-20 mx-auto max-w-7xl">
-        <div className="flex flex-col w-full space-y-5">
+        <div className="flex flex-col items-center w-full space-y-5">
           <div className="flex items-end space-x-5">
-            <img src={proud} className="aspect-[1/1] w-[110px] md:w-[200px]" />
+            <img
+              src={proud}
+              className="aspect-[1/1] w-[110px] md:w-[130px] lg:w-[160px]"
+            />
             <div className="flex flex-col">
               <div className="text-4xl md:text-5xl lg:text-6xl">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-500 ">
@@ -28,18 +31,32 @@ const Home = () => {
             </div>
           </div>
           <div className="flex flex-wrap items-start gap-2 text-xs md:text-sm">
-            <button className="bg-indigo-500 text-stone-50 shadow flex items-center justify-center rounded-full px-2 py-1 space-x-2">
+            <a
+              href="tel:817-239-3031"
+              className="bg-indigo-500 text-stone-50 shadow flex items-center justify-center rounded-full px-2 py-1 space-x-2"
+            >
               <AiFillPhone /> <p>817 239 3031</p>
-            </button>
-            <button className="bg-indigo-500 text-stone-50 shadow flex items-center justify-center rounded-full px-2 py-1 space-x-2">
+            </a>
+            <a
+              href="mailto:contact@mustafamousa.com"
+              className="bg-indigo-500 text-stone-50 shadow flex items-center justify-center rounded-full px-2 py-1 space-x-2"
+            >
               <AiFillMail /> <p>contact@mustafamousa.com</p>
-            </button>
-            <button className="bg-indigo-500 text-stone-50 shadow flex items-center justify-center rounded-full px-2 py-1 space-x-2">
+            </a>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/mustafa-mousa-8b8053157/"
+              className="bg-indigo-500 text-stone-50 shadow flex items-center justify-center rounded-full px-2 py-1 space-x-2"
+            >
               <AiFillLinkedin /> <p>LinkedIn</p>
-            </button>
-            <button className="bg-indigo-500 text-stone-50 shadow flex items-center justify-center rounded-full px-2 py-1 space-x-2">
+            </a>
+            <a
+              target="_blank"
+              href="https://github.com/mustafaomousa"
+              className="bg-indigo-500 text-stone-50 shadow flex items-center justify-center rounded-full px-2 py-1 space-x-2"
+            >
               <AiFillGithub /> <p>Github</p>
-            </button>
+            </a>
           </div>
         </div>
       </SectionContainer>
