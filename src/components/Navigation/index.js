@@ -33,7 +33,7 @@ const Navigation = ({ sections }) => {
           {/* <p className="text-xs text-stone-500">LinkedIn</p> */}
           <a
             className="text-sm text-purple-700"
-            href="https://www.linkedin.com/in/mustafa-mousa-8b8053157/"
+            href="https://www.linkedin.com/in/mustafa-m-8b8053157/"
           >
             LinkedIn
           </a>

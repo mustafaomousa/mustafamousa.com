@@ -45,7 +45,7 @@ const Home = () => {
             </a>
             <a
               target="_blank"
-              href="https://www.linkedin.com/in/mustafa-mousa-8b8053157/"
+              href="https://www.linkedin.com/in/mustafa-m-8b8053157/"
               className="bg-indigo-500 text-stone-50 shadow flex items-center justify-center rounded-full px-2 py-1 space-x-2"
             >
               <AiFillLinkedin /> <p>LinkedIn</p>
