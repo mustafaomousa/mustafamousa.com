@@ -38,10 +38,10 @@ const Home = () => {
               <AiFillPhone /> <p>817 239 3031</p>
             </a>
             <a
-              href="mailto:contact@mustafamousa.com"
+              href="mailto:mustafaomousa@icloud.com"
               className="bg-indigo-500 text-stone-50 shadow flex items-center justify-center rounded-full px-2 py-1 space-x-2"
             >
-              <AiFillMail /> <p>contact@mustafamousa.com</p>
+              <AiFillMail /> <p>mustafaomousa@icloud.com</p>
             </a>
             <a
               target="_blank"

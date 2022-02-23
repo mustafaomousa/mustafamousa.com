@@ -27,7 +27,7 @@ const Navigation = ({ sections }) => {
         </div>
         <div>
           {/* <p className="text-xs text-stone-500">Email</p> */}
-          <p className="text-sm text-purple-700">contact@mustafamousa.com</p>
+          <p className="text-sm text-purple-700">mustafaomousa@icloud.com</p>
         </div>
         <div>
           {/* <p className="text-xs text-stone-500">LinkedIn</p> */}
