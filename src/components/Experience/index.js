@@ -3,6 +3,15 @@ import SectionTitle from "../../styled/SectionTitle";
 
 const experience = [
   {
+    title: "Junior Software Developer",
+    company: "SumZero",
+    period: "April 2022 - Current",
+    bullets: [
+
+    ],
+    type: "Full Time",
+  },
+  {
     title: "Content Manager",
     company: "Horse Alley",
     period: "July 2018 - September 2020",
